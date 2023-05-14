@@ -1,4 +1,77 @@
-h1 {
-    background: burlywood;
- color: grey;
+
+html {
+    background: black;
 }
+
+body {
+    background: gray;
+}
+
+/* Глобальний селектор для виділення усієї сторінки */
+* {
+    color:green;
+}
+
+/* Корневий тег (головний) звертається до <html> тегу */
+:root {
+background: purple;
+}
+
+/* Селектор який звертається до класу наприклад "<div class="p-5 box">" */
+div.box {
+    background: #0ca9a9
+}
+
+button.btn {
+    color: red;
+}
+
+/* Звертається до ідентифікатора id  наприклад "<h1 id="user">Hello world!</h1>" */
+#user,
+.user {
+    color:blue;
+}
+
+/* можна звертатись до декількох тегів через "," */
+h1,
+h2#user,
+button.btn {
+    color: green;
+}
+
+/* Селектор звертається від батьківського тегу чи його класу, до дочірнього */
+div > p {
+    color: paleturquoise;
+}
+.box > p {
+    color: paleturquoise;
+}
+
+footer > .user {
+    color:rgb(211, 25, 140);
+}
+
+/* Селектор НАЩАДОК це будь який тег буде змінений, який розташований в середині іншого тегу */
+footer .child{
+    color:rgb(252, 202, 5);
+}
+
+/* Селектор який надає стилі для тегу який йде відразу після основного */
+  h1 + p {
+    background: black;
+  }
+
+/* Селектор який надає стилі для cусідніх тегів, що розташовані після основного тегу */
+  h1 ~ p,
+  h1 ~ * > p {
+    background: rgb(55, 243, 67);
+  }
+
+
+
+
+
+
+
+
+
