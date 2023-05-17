@@ -153,75 +153,189 @@ color: rosybrown;
 
                       /* СЕЛЕКТОРИ 3 ЧАСТИНА */
 
-.input-dark {
+/* .input-dark {
 background: rgb(219, 214, 203);
-}
+} */
 
 /* Селектор атирибуту */
-.input-dark[required] {
+/* .input-dark[required] {
     background: red;
-}
+} */
 
 /* Селектор значення атрибуту */
-.input-dark[type="number"] {
+/* .input-dark[type="number"] {
     background: rgb(76, 213, 78);
-}
+} */
 
 /* Селектор який вибирає тег якщо він має вказаний атрибут в якому можуть перебувати деілька різних значень */
-.small-img[alt~="small"] {
+/* .small-img[alt~="small"] {
     height: 200px;
 }
 .card[class~=img] {
     height: 500px;
-}
+} */
 
-a[rel~="external"] {
+/* a[rel~="external"] {
     color: green;
-}
+} */
 
 /* Селектор префіксу сначення атрибуту */
-button[class|="btn"] {
+/* button[class|="btn"] {
     background: rgb(224, 214, 214);
-}
+} */
 
 /* Селекор який обирає тег якщо він має вказаний атрибут, значення якого починається з вказаного value */
-a[class^='btn'] {
+/* a[class^='btn'] {
     background: rgb(83, 75, 75);
-}
+} */
 
 /* Слектор який обирає певне значення яке вказано в тегу і атрибуту і не має значення де воно розташоване чи на початку чи на кінці  */
-a[class*='btn'] {
+/* a[class*='btn'] {
     background: rgb(176, 96, 96);
-}
+} */
 
 /* Селектор який обирає тег якщо він має вказаний атрибут значення якого закінчується з в казаного value */
-a[class$='secondary'] {
+/* a[class$='secondary'] {
     background: rgb(17, 16, 16);
-}
+} */
 
 /* Селектор який дозволяє стилізувати певні частини елементів */
-.btn::first-letter {
+/* .btn::first-letter {
     color: blueviolet;
-}
+} */
 
 /* для першого рядка */
-.big-text::first-line {
+/* .big-text::first-line {
     color: rgb(212, 18, 41);
-}
+} */
 
 /* Селектор якйи задає  стиліації для тексту атрибуту placeholder тегу input */
-.input-dark::placeholder {
+/* .input-dark::placeholder {
     color: green;
+    background: greenyellow;
+} */
+
+/* Cелектор надає можливість вказати контент який буде йти попереду основного контенту елемента, та надати йому стилі */
+/* .big-text::before {
+    content: '$$$';
+    color: green;
+} */
+
+/* Cелектор надає можливість вказати контент який буде йти після основного контенту елемента, та надати йому стилі */
+/* .big-text::after {
+    content: '$$$';
+} */
+
+
+                           /* Селектори 4 частина */
+
+
+/* Селектор цільового типу якір */
+#test:target {
+    color: red;
+}
+
+/* Селектор обирає тег <a> якщо по його посиланю користувач не переходив */
+.link:link {
+    color:red;
+}
+
+/* Селектор наведення */
+.link:hover {
+    color: green;
+}
+
+/* Слектор який обирає тег коли користувач на нього натиснув мишкою */
+.link:active {
+    color:yellow; 
+}
+
+.card:active {
+    background-color: purple;
+}
+
+/* Селектор який обирає тег, коли користувач почав взаємодіяти з ним */
+input {
+    background:gray;
+}
+input:focus {
+    background-color: red;
+}
+
+/* Селектор який вибирає тег коли користувач почав взаємодіяти з ним або з його дитячими тегами */
+.card:focus-within {
+    background: red;
+}
+
+
+/* Селектор МОВИ він обирає тег який має атрибут lang з вказаним значенням */
+.card:lang(en) > span::after {
+content: '(en)';
+}
+
+/* Селектор який обирає тег форми який доступний і не заблокований для взаємодії */
+button:enabled {
+    background: green
+}    
+
+button {
     background: greenyellow;
 }
 
-/* Cелектор надає можливість вказати контент який буде йти попереду основного контенту елемента, та надати йому стилі */
-.big-text::before {
-    content: '$$$';
-    color: green;
+/* Селектор який обирає тег форми який не доступний і є заблокований для взаємодії */
+button:disabled {
+    background: aqua;
 }
 
-/* Cелектор надає можливість вказати контент який буде йти після основного контенту елемента, та надати йому стилі */
-.big-text::after {
-    content: '$$$';
+/* Селектор який обирає тег форми в який ми можемо вводити свої значення */
+.inp:read-write {
+    background: blue;
 }
+
+
+/* Селектор який обирає тег форми в який ми не можемо вводити свої значення а лише його читати*/
+.inp:read-only {
+    background-color: red;
+}
+
+/* Cелектор обирає тег форми який був відмічений або вибраний користувачем */
+input[type='checkbox']:checked ~ span {
+    background: red;
+}
+
+/* Селектор який обирає тег поля форми який пройшов валідацію і є валідним */
+.valid:valid {
+    background: yellow;
+}
+
+/* Селектор який обирає тег поля форми який не пройшов валідацію і не є валідним */
+.valid:invalid {
+    background: goldenrod;
+}
+
+/* Селектор який обирає тег поля форми який є необовязковим там має атрибут optional */
+.valid:optional {
+    background-color: green;
+}
+
+/* Селектор обирає тег input значення якого виходить за межі вказаного діапазону атрибутиів min та max  */
+.number:focus {
+    background-color: gray;     
+} 
+.number:out-of-range {
+    background: red;
+}
+
+/* Селектор обирає тег input значення якого знаходиться в межах вказаного діапазону атрибутиів min та max  */
+.number:in-range {
+    background: green
+}
+
+/* Селектор який обирає тег input який має атрибут placeholder */
+input:placeholder-shown ~ span {
+    background-color: pink;
+}
+
+
+
+
