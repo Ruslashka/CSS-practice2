@@ -1,91 +1,85 @@
-.lesson-four-task-one:hover {
-  color: red;
-  background: yellow;
+.card {
 }
 
-.lesson-four-task-two:hover {
-  background: green;
+.card > p {
+  color: green;
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 1px blue;
 }
 
-.lesson-four-task-three:visited {
-  color: yellow;
+p:focus, 
+p:active,
+p:hover {
+  -webkit-text-fill-color: rgb(27, 211, 45);
+  -webkit-text-stroke: 1px rgb(207, 37, 179);
+
+  direction: rtl;
 }
 
-.lesson-four-task-four .link:link {
-  color: red;
+#test {
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke: inherit;
+
+  /* writing-mode: vertical-lr; */
+  text-align: justify;
+
+  letter-spacing: 0.1em;
 }
 
-.lesson-four-task-five .btn:active {
-  background: blue;
+span {
+  text-transform:uppercase ;
+
+  text-decoration: underline dotted red;
+
+  text-decoration-color: rgb(18, 217, 181);
+
+text-decoration-line: overline;
+
+text-decoration-style:wavy;
 }
 
-.lesson-four-task-six .btn:focus {
-  background-color: rgb(225, 144, 15);
+pre {
+  tab-size: 5;
 }
 
-.lesson-four-task-seven #target:target {
-  color: white;
-  background: green;
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  font-weight: 900;
+  font-style: italic;
+
+  font-display: swap;
 }
 
- input[type='checkbox']:checked ~ #target  {
-  color: white;
-  background: blue;
+span {
+  font-size: x-large;
+
+  font-weight: lighter;
+
+  font-style: oblique;
 }
 
-.lesson-four-task-nine :lang(uk) {
-  color: blue;
+p {
+  font-stretch: expanded;
 }
 
-.lesson-four-task-ten .form-group :enabled {
-  color: red;
-  background: yellow;
+/* ВІДОБРАЖЕННЯ БЛОКІВ */
+
+.test {
+  display: block;
 }
 
-.lesson-four-task-eleven input:disabled {
-  background-color: yellow;
-}
+.block {
+  display: inline-block;
+  background: rgb(226, 220, 220);
+  margin: auto;
 
-.lesson-four-task-twelve input:read-write {
-background: yellow;
-}
+  width: 100px;
+  
+  max-width: 600px;
 
-.lesson-four-task-thirteen input:read-only {
-  background-color: yellow;
-}
+  min-height: 100px;
 
-.lesson-four-task-fourteen input:valid {
-  background-color: green;
-}
-
-.lesson-four-task-fourteen input:invalid {
-  background-color: red;
-}
-
-.lesson-four-task-fifteen textarea:optional {
-  background-color: red;
-}
-
-.lesson-four-task-sixteen :out-of-range {
-  color: red;
-}
-
-.lesson-four-task-seventeen :in-range {
-  color: red;
-}
-
-.lesson-four-task-eighteen input:placeholder-shown {
-  background-color: red;
-} 
-
-.lesson-four-task-nineteen :focus-within {
-  color: white;
-  background-color: yellow;
-}
-
-.lesson-four-task-twenty input[type='email']:invalid {
-  background-color: red;
-}
-.lesson-four-task-twenty input[type='text']:invalid {
-  background-color: red;
+  max-height: max-content;
 }
