@@ -44,16 +44,37 @@
     {{#with updates}}
     <h6 class="main_title">{{title}}</h6>
 
+    {{#each list}}
     <div class="main_list">
-        {{#each list}}
         <div class="list_img"></div>
-        <span class="list_nick">{{nickname}}</span>
-        <p class="list_info">{{description}}</p>
+        <div class="text">
+            <span class="list_nick">{{nickname}}</span>
+            <p class="list_info">{{description}}</p>
+        </div>
         <hr class="border">
+    </div>
+    {{/each}}
+
+    {{#with show_all}}
+    <a href="{{url}}" class="main_button">{{text}}</a>
+    {{/with}}
+    {{/with}}
+</main>
+
+<div class="expirience">
+    {{#with expirience}}
+    <h3 class="expirience_title">{{title}}</h3>
+    <span class="expirience_badge">{{badge}}</span>
+    <div class="expirience_list">
+        {{#each list}}
+        <div>
+            <h6 class="expirience_name">{{name}}</h6>
+            <p class="expirience_info">{{details}}</p>
+        </div>
         {{/each}}
     </div>
     {{/with}}
-</main>
+</div>
 
 
 <footer class="footer" id="test">
