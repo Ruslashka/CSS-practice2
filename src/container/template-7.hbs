@@ -31,18 +31,18 @@
             </div>
 
 
-            {{#each articles}}
-            <div class="articles_block">
-                <div class="articles_card">
-                    <img class="articles_img" src="{{photo}}" alt="photo">
-                    <h5 class="card_name">{{name}}</h5>
-                    <p class="card_info">{{description}}</p>
+            <div class="articles_general-block">
+                {{#each articles}}
+                <div class="articles_block">
+                    {{> articleCardDark data=this}}
                 </div>
+                {{/each}}
             </div>
-            {{/each}}
-
-
         </div>
+
+        <footer class="footer_blog">
+            {{> footerDark data=this}}
+        </footer>
 
     </div>
 </main>
