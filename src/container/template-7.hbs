@@ -1,22 +1,48 @@
 <main class="page">
     <div class="page_content">
-        <header class="header_card">
-            {{#with header}}
-            <span class="header_logo">{{brandName}}</span>
 
-            <div class="nav">
-                {{#each links}}
-                <a href="{{url}}" class="nav_link">{{text}}</a>
-                {{/each}}
-            </div>
-            <div class="header_user">
-                <span class="user">Users online:{{userOnline}}</span>
-                {{#with ad}}
-                <span class="header_span">Ad</span>
-                <p class="header_info">{{text}}:{{url}}</p>
-                {{/with}}
+        <header>
+            {{> headerDark data=this}}
+        </header>
+
+        <div class="hero">
+            {{#with hero}}
+            <h2 class="hero_title">{{title}}</h2>
+            <p class="hero_text">{{description}}</p>
+            {{#with button}}
+            <div class="hero_button">
+                <a href="{{url}}" class="button">{{text}}</a>
             </div>
             {{/with}}
-        </header>
+            {{/with}}
+        </div>
+
+        <div class="about">
+            {{#with about}}
+            <h4 class="about_title">{{heading}}</h4>
+            <p class="about_info">{{info}}</p>
+            {{/with}}
+        </div>
+
+        <div class="articles">
+            <div class="articles_header">
+                <h2 class="articles_title">Our Articles</h2>
+                <a class="button_title">View All</a>
+            </div>
+
+
+            {{#each articles}}
+            <div class="articles_block">
+                <div class="articles_card">
+                    <img class="articles_img" src="{{photo}}" alt="photo">
+                    <h5 class="card_name">{{name}}</h5>
+                    <p class="card_info">{{description}}</p>
+                </div>
+            </div>
+            {{/each}}
+
+
+        </div>
+
     </div>
 </main>
