@@ -139,7 +139,7 @@ color: blue;
   display: flex;
   width: 100%;
   align-items: flex-start;
-  gap: 40px;
+  gap: var(--space-l);
 }
 
 .messages {
