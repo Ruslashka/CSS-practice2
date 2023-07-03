@@ -1,4 +1,5 @@
 // Підключаємо технологію express для back-end сервера
+const { template } = require('@babel/core')
 const express = require('express')
 // Cтворюємо роутер - місце, куди ми підключаємо ендпоїнти
 const router = express.Router()
@@ -878,7 +879,6 @@ router.get('/template-5', function (req, res) {
 
 // ================================================================
 
-
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/template-7', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -980,11 +980,16 @@ router.get('/template-7', function (req, res) {
           name: 'Refund Policy',
         },
       ],
-=============================================================================
-router.get('/template-6', function (req, res) {
-  // res.render генерує нам HTML сторінку
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
-  //            ↙ cюди вводимо назву файлу з сontainer
+// =============================================================================
+// res.render генерує нам HTML сторінку
+
+//            ↙ cюди вводимо назву файлу з сontainer
+router.get('/template-6', function (req, res) {
   res.render('template-6', {
     layout: 'template-6',
 
