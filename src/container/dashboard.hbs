@@ -51,19 +51,6 @@
                     <span class="text text--light">Products</span>
                 </a>
 
-                <div class="relative click">
-                    <div class="field field--select relative">
-                        <span class="text text--light">Choose...</span>
-                    </div>
-                    <select class="field__select">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-
             </nav>
         </aside>
         <header class="header">
@@ -105,8 +92,8 @@
                             <span class="icon analytic__arrow"
                                 style="background-image: url('/svg/analytic/blue-arrow.svg')"></span>
                         </div>
-
                     </div>
+
                     <div class="analytic analytic--double analytic--blue">
                         <span class="icon analytic__button icon--button icon--color-blue click"
                             style="background-image: url('/svg/analytic/order.svg')"></span>
@@ -118,29 +105,151 @@
                             <span class="icon analytic__arrow"
                                 style="background-image: url('/svg/analytic/blue-arrow.svg')"></span>
                         </div>
-
                     </div>
 
-                    <div class="analytic--income analytic__income--blue analytic--double analytic--blue">
-                        <span class="icon analytic__button icon--button icon--color-blue click"
-                            style="background-image: url('/svg/analytic/money-blue.svg')"></span>
-                        <div class="relative vertical vertical--small">
-                            <div class="analytic__title-2 text text--light">$203k</div>
-                            <div class="text text--small text--lighter">Total Income</div>
+
+                    <div class="analytic__block-2">
+                        <div class="analytic--income analytic__income--blue analytic--double analytic--blue">
+                            <span class="icon analytic__button icon--button icon--color-blue click"
+                                style="background-image: url('/svg/analytic/money-blue.svg')"></span>
+                            <div class="relative vertical vertical--small">
+                                <div class="analytic__title-2 text text--light">$203k</div>
+                                <div class="text text--small text--lighter">Total Income</div>
+                            </div>
+                        </div>
+
+                        <div class="analytic--income analytic__income--white analytic--double analytic--white">
+                            <span class="icon analytic__button icon--button icon--color-blue click"
+                                style="background-image: url('/svg/analytic/income.svg')"></span>
+                            <div class="relative vertical vertical--small">
+                                <div class="analytic__title-2 text text--black">$203k</div>
+                                <div class="text text--small text--lighter-2">Total Income</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="analytic--income analytic__income--white analytic--double analytic--white">
-                        <span class="icon analytic__button icon--button icon--color-blue click"
-                            style="background-image: url('/svg/analytic/income.svg')"></span>
-                        <div class="relative vertical vertical--small">
-                            <div class="analytic__title-2 text text--black">$203k</div>
-                            <div class="text text--small text--lighter-2">Total Income</div>
-                        </div>
-                    </div>
-
                 </section>
+                <div class="layout block__footer">
+                    <div class="fotter purchase__list">
+                        <h4 class="purchase__title">Purchase list</h4>
+
+                        <div class="divider"></div>
+
+                        <div class="purchase__list-pay">
+                            <div class="text pay--info">
+                                <div>ID437661</div>
+                                <span>May 11, 2023, 14:21</span>
+                            </div>
+                            <div class="text pay--info">
+                                <div>AirOn ProCam</div>
+                                <span>7/8 USB Type-C</span>
+                            </div>
+                            <div class="text pay--info">
+                                <div>132.32 EUR</div>
+                                <span class="not--paid">Not paid</span>
+                            </div>
+                            <div class="text pay--info">
+                                <div>Customer</div>
+                                <span>robin@com.de</span>
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="purchase__list-pay">
+                            <div class="text pay--info">
+                                <div>ID437661</div>
+                                <span>May 11, 2023, 14:21</span>
+                            </div>
+                            <div class="text pay--info">
+                                <div>PHILIPS Essential</div>
+                                <span>HD9200/90</span>
+                            </div>
+                            <div class="text pay--info">
+                                <div>543 USD</div>
+                                <span class="pay--by">Pay by Stripe</span>
+                            </div>
+                            <div class="text pay--info">
+                                <div>Customer</div>
+                                <span>dima@com.ua</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fotter payment">
+                        <h4 class="payment__title">Payment</h4>
+
+                        <div class="divider"></div>
+
+
+                        <div class="payment__radio">
+                            <div>
+                                <input class="form-check-input" type="radio">
+                                <label for="" class="text radio--text">Credit card</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="radio">
+                                <label for="" class="text radio--text">Debit card</label>
+                            </div>
+                            <div>
+                                <input class="form-check-input" type="radio">
+                                <label for="" class="text radio--text">PayPal</label>
+                            </div>
+                        </div>
+
+                        <div class="payment__form">
+                            <div class="form--1">
+                                <label class="text--form text--form">Name on card</label>
+                                <input type="text" class="field">
+                            </div>
+                            <div class="form--1">
+                                <label class="text--form text--form">Credit card number</label>
+                                <input type="text" class="field">
+                            </div>
+                            <div class="form--1">
+                                <label class="text--form text--form">Expiration</label>
+                                <input type="text" class="field">
+                            </div>
+                            <div class="form--1">
+                                <label class="text--form text--form">CVV</label>
+                                <input type="text" class="field">
+                            </div>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="relative click payment__form">
+                            <div class="field field--select relative">
+                                <span class="text">Choose...</span>
+                            </div>
+                            <select class="field__select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <div class="field field--select relative">
+                                <span class="text">Choose...</span>
+                            </div>
+                            <select class="field__select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <a href="#" class="button form__button text">Continue to checkout</a>
+                    </div>
+                </div>
             </div>
-        </main>
+    </div>
+    </main>
+
+
     </div>
 
     <script src="https://kit.fontawesome.com/3aa4a71438.js" crossorigin="anonymous"></script>
